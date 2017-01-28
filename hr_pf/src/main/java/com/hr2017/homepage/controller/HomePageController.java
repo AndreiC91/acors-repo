@@ -8,13 +8,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomePageController {
-	String message = "Welcome to Spring MVC!";
 	 
 	@RequestMapping("/homepage")
-	public ModelAndView showMessage(
-			@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
-		System.out.println("in controller");
- 
+	public ModelAndView homepageDefault(@RequestParam(value = "name", required = false, defaultValue = "World") String name) 
+	{
+		System.out.println("in controller"+name);
+		String message = "";
+		if (name.equalsIgnoreCase("raluca")) message = "Buna, "+name+"! >:D< :*";
+		else message = "Buna, "+name+". Nu esti Raluca! :(";
 		ModelAndView mv = new ModelAndView("homepage");
 		mv.addObject("message", message);
 		mv.addObject("name", name);

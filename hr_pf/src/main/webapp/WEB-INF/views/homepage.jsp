@@ -3,14 +3,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Spring 4 MVC -HelloWorld</title>
+<title>UBIS HR Tools - Homepage</title>
 </head>
 <body>
 	<center>
-		<h2>Hello World</h2>
 		<h2>
-			${message} ${name}
+			${message}
 		</h2>
+		<h3>
+			<a href="index.jsp">Logout</a>
+		</h3>
 	</center>
 </body>
 </html>

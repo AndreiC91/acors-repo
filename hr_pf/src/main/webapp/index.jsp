@@ -10,9 +10,10 @@ pageEncoding="ISO-8859-1"%>
 <body>
  
 	<center>
-		<h2>Hello World</h2>
+		<h2>Please enter your credentials:</h2>
 		<h3>
-			<a href="homepage?name=Eric">Click Here</a>
+			Name: <input type="text" id="name"> <br/>
+			<a href="" onclick="this.href='homepage?name='+document.getElementById('name').value">Login</a>
 		</h3>
 	</center>
 </body>
