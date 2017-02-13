@@ -22,4 +22,6 @@ public class HomePageController {
 		return mv;
 	}
 	
+	static void method(){};
+	
 }
