@@ -1,7 +1,6 @@
 package com.hr2017.homepage.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -12,6 +11,7 @@ public class HomePageController {
 	@RequestMapping("/homepage")
 	public ModelAndView homepageDefault(@RequestParam(value = "name", required = false, defaultValue = "World") String name) 
 	{
+		/*
 		System.out.println("in controller"+name);
 		String message = "";
 		if (name.equalsIgnoreCase("raluca")) message = "Buna, "+name+"! >:D< :*";
@@ -20,8 +20,8 @@ public class HomePageController {
 		mv.addObject("message", message);
 		mv.addObject("name", name);
 		return mv;
+		*/
+		ModelAndView mv = new ModelAndView(name);
+		return mv;
 	}
-	
-	static void method(){};
-	
 }

@@ -10,7 +10,7 @@ pageEncoding="ISO-8859-1"%>
 <body>
  
 	<center>
-		<h2>Please enter your credentials:</h2>
+<!--		<h2>Please enter your credentials:</h2>
 		<h3>
 			Name: <input type="text" id="name"> <br/>
 			<a href="" onclick="this.href='homepage?name='+document.getElementById('name').value">Login</a>
@@ -18,7 +18,11 @@ pageEncoding="ISO-8859-1"%>
 			<input type="button" value="Let's make a story! :)" onclick="story()" />
 			<br/><br/><br/>
 			<input type="button" value="Simple Math! :)" onclick="simplemath()" />
-		</h3>
+		</h3> -->
+		<h4>
+			<input type="button" value="EX1" onclick="location.href='homepage?name=ex1'" /> <br> <br>
+			<input type="button" value="EX2" onclick="location.href='homepage?name=ex2'" />
+		</h4>
 	</center>
 </body>
 
