@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0/EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="jpa.entities.User" table="users">
+		<id name="id" type="int">
+			<column name="id" not-null="true" unique="true" />
+			<generator class="identity" />
+		</id>
+
+		<property name="username" type="java.lang.String">
+			<column name="username" length="30" not-null="true" unique="true" />
+		</property>
+		<property name="password" type="java.lang.String">
+			<column name="password" length="20" not-null="true" />
+		</property>
+
+		<property name="isAvailable" type="boolean">
+			<column name="isavailable" not-null="true" />
+		</property>
+
+		<property name="first_name" type="java.lang.String">
+			<column name="first_name" length="50" not-null="false" />
+		</property>
+		<property name="last_name" type="java.lang.String">
+			<column name="last_name" length="50" not-null="false" />
+		</property>
+
+		<property name="showName" type="boolean">
+			<column name="showname" not-null="true" />
+		</property>
+
+		<property name="points" type="int">
+			<column name="points" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

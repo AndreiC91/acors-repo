@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entity-mappings version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+        http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+	
+	<entity class="jpa.entities.User">
+		<table name="users" />
+		<attributes>
+			<id name="id">
+				<generated-value strategy="IDENTITY" />
+				<column name="id" nullable="false" unique="true" />
+			</id>
+			
+			<basic name="username">
+				<column name="username" length="30" nullable="false" unique="true" />
+			</basic>
+			<basic name="password">
+				<column name="password" length="20" nullable="false" />
+			</basic>
+			
+			<basic name="isAvailable">
+				<column name="isavailable" nullable="false" />
+			</basic>
+			
+			<basic name="first_name">
+				<column name="first_name" length="50" nullable="true" />
+			</basic>
+			<basic name="last_name">
+				<column name="last_name" length="50" nullable="true" />
+			</basic>
+			
+			<basic name="showName">
+				<column name="showname" nullable="false" />
+			</basic>
+			
+			<basic name="points">
+				<column name="points" nullable="false" />
+			</basic>
+		</attributes>
+	</entity>			
+
+</entity-mappings>
